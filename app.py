@@ -44,11 +44,11 @@ swap_guages = [
     Gauge('swap_avail', 'Available swap memory')
 ]
 
-gen_info_regex  = re.compile('up\s(\d+)\s.*?(\d+)[:](\d+).*?(\d+)\suser.*?load average[:]\s(\d+,\d+),\s(\d+,\d+),\s(\d+,\d+)')
-tasks_regex     = re.compile('Tasks:\s(\d+)\stotal.*?(\d+)\srunning.*?(\d+)\ssleeping.*?(\d+)\sstopped.*?(\d+)\szombie')
-cpu_regex       = re.compile('%Cpu.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)')
-memory_regex    = re.compile('Mi.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)')
-swap_regex      = re.compile('Mi.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)')
+gen_info_regex  = 'up\s(\d+)\s.*?(\d+)[:](\d+).*?(\d+)\suser.*?load average[:]\s(\d+,\d+),\s(\d+,\d+),\s(\d+,\d+)'
+tasks_regex     = 'Tasks:\s(\d+)\stotal.*?(\d+)\srunning.*?(\d+)\ssleeping.*?(\d+)\sstopped.*?(\d+)\szombie'
+cpu_regex       = '%Cpu.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)'
+memory_regex    = 'Mi.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)'
+swap_regex      = 'Mi.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)'
 
 def set_guages(guages, matches):
         for index, guage in enumerate(guages):
