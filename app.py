@@ -44,7 +44,7 @@ swap_guages = [
     Gauge('swap_avail', 'Available swap memory')
 ]
 
-gen_info_regex  = 'up.*?(\d+).*?(\d+)\suser.*?load average[:]\s(\d+,\d+),\s(\d+,\d+),\s(\d+,\d+)'
+gen_info_regex  = 'up.*?(\d+).*?(\d+)\s?user.*?load average[:]\s(\d+[,.]\d+)[,.]\s(\d+[,.]\d+),\s(\d+[,.]\d+)'
 tasks_regex     = 'Tasks:\s(\d+)\stotal.*?(\d+)\srunning.*?(\d+)\ssleeping.*?(\d+)\sstopped.*?(\d+)\szombie'
 cpu_regex       = '%Cpu.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)'
 memory_regex    = 'Mi.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)'
