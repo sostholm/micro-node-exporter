@@ -45,10 +45,10 @@ swap_guages = [
 ]
 
 gen_info_regex  = 'up.*?(\d+).*?(\d+)\s?user.*?load average[:]\s(\d+[,.]\d+)[,.]\s(\d+[,.]\d+),\s(\d+[,.]\d+)'
-tasks_regex     = 'Tasks:\s(\d+)\stotal.*?(\d+)\srunning.*?(\d+)\ssleeping.*?(\d+)\sstopped.*?(\d+)\szombie'
-cpu_regex       = '%Cpu.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)'
-memory_regex    = 'Mi.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)'
-swap_regex      = 'Mi.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)'
+tasks_regex     = 'Tasks:\s+(\d+)\stotal.*?(\d+)\srunning.*?(\d+)\ssleeping.*?(\d+)\sstopped.*?(\d+)\szombie'
+cpu_regex       = '%Cpu.*?(\d+[,.]\d+).*?(\d+[,.]\d+).*?(\d+[,.]\d+).*?(\d+[,.]\d+).*?(\d+[,.]\d+).*?(\d+[,.]\d+).*?(\d+[,.]\d+).*?(\d+[,.]\d+)'
+memory_regex    = 'Mi.*?(\d+[,.]\d+).*?(\d+[,.]\d+).*?(\d+[,.]\d+).*?(\d+[,.]\d+)'
+swap_regex      = 'Mi.*?(\d+[,.]\d+).*?(\d+[,.]\d+).*?(\d+[,.]\d+).*?(\d+[,.]\d+)'
 
 def set_guages(guages, matches):
         for index, guage in enumerate(guages):
