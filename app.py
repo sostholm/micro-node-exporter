@@ -44,7 +44,7 @@ swap_guages = [
     Gauge('swap_avail', 'Available swap memory')
 ]
 
-gen_info_regex  = 'up\s(\d+)\s.*?(\d+).*?(\d+)\suser.*?load average[:]\s(\d+,\d+),\s(\d+,\d+),\s(\d+,\d+)'
+gen_info_regex  = 'up.*?(\d+).*?(\d+)\suser.*?load average[:]\s(\d+,\d+),\s(\d+,\d+),\s(\d+,\d+)'
 tasks_regex     = 'Tasks:\s(\d+)\stotal.*?(\d+)\srunning.*?(\d+)\ssleeping.*?(\d+)\sstopped.*?(\d+)\szombie'
 cpu_regex       = '%Cpu.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)'
 memory_regex    = 'Mi.*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+).*?(\d+,\d+)'
@@ -87,7 +87,9 @@ def gen_metrics():
 
 if __name__ == '__main__':
     # Start up the server to expose the metrics.
-    start_http_server(8000)
+    print('Starting server...', flush=True)
+    start_http_server(addr='172.17.0.1',port=8000)
+    print('Server started.')
     # Generate some requests.
     while True:
         gen_metrics()

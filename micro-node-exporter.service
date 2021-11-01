@@ -1,9 +1,11 @@
 [Unit]
 Description=Micro Node Exporter Service
-After=multi-user.target
+Wants=network.target
+After=network.target
 [Service]
-Type=simple
+User=micro-node-exporter
 Restart=always
+ExecStartPre=/bin/sleep 10
 ExecStart=/usr/bin/python3 /opt/micro-node-exporter/app.py
 [Install]
 WantedBy=multi-user.target
