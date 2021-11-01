@@ -1,5 +1,5 @@
 # Micro Node Exporter
-Is designed to export basic metrics from a server using the top command, exporting it through the prometheus http server.
+The goal of the micro-node-exporter is to provide a super simple and transparent way of getting basic server metrics into prometheus.
 
 run by: 
 pip install -r requirements.txt
@@ -7,4 +7,5 @@ python app.py
 
 
 # Install as systemd service
-- create a new user: sudo adduser micro-node-exporter --disable-login
+- Prerequesits pip3
+- Run the install.sh script
