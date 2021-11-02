@@ -6,4 +6,4 @@ sudo chown micro-node-exporter /home/micro-node-exporter/micro-node-exporter/app
 sudo cp micro-node-exporter.service /etc/systemd/system/
 sudo -u micro-node-exporter /usr/bin/python3 -m pip install -r requirements.txt
 sudo systemctl enable micro-node-exporter
-sudo systmectl start micro-node-exporter
+sudo systemctl start micro-node-exporter
