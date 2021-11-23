@@ -6,6 +6,6 @@ After=network.target
 User=micro-node-exporter
 Restart=always
 ExecStartPre=/bin/sleep 10
-ExecStart=/usr/bin/python3 /home/micro-node-exporter/app.py
+ExecStart=/usr/bin/python3 /home/micro-node-exporter/micro-node-exporter/app.py
 [Install]
 WantedBy=multi-user.target
