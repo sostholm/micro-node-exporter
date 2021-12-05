@@ -88,7 +88,7 @@ def gen_metrics():
 if __name__ == '__main__':
     # Start up the server to expose the metrics.
     print('Starting server...', flush=True)
-    start_http_server(addr='172.17.0.1',port=8000)
+    start_http_server(addr='0.0.0.0',port=8000)
     print('Server started.')
     # Generate some requests.
     while True:
